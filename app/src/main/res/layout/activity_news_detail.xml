@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.NewsDetailActivity">
+
+    <ImageView
+        android:id="@+id/ivNews"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/default_image"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ten_dp"
+        android:fontFamily="@font/futura_light_font"
+        android:textColor="@color/black"
+        android:textSize="@dimen/twenty_sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivNews"
+        android:layout_marginEnd="@dimen/ten_dp"
+        android:layout_marginStart="@dimen/ten_dp"/>
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/futura_light_font"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        android:textSize="@dimen/sixteen_sp"
+        android:layout_marginTop="@dimen/three_dp"
+        android:layout_marginEnd="@dimen/ten_dp"
+        android:layout_marginStart="@dimen/ten_dp"/>
+
+    <TextView
+        android:id="@+id/tvAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/futura_light_font"
+        android:textColor="@color/design_default_color_primary"
+        app:layout_constraintEnd_toEndOf="@id/tvDescription"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription"
+        android:textSize="@dimen/fourteen_sp"
+        android:layout_marginEnd="@dimen/ten_dp"
+        android:layout_marginTop="@dimen/ten_dp"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:maxLength="50"
+        android:layout_marginBottom="@dimen/five_dp"/>
+
+    <TextView
+        android:id="@+id/tvLikes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAuthor"
+        android:paddingStart="@dimen/five_dp"
+        android:paddingEnd="@dimen/five_dp"
+        android:text="@string/_0"
+        android:drawablePadding="@dimen/five_dp"
+        android:layout_marginTop="@dimen/twenty_four_dp"
+        app:drawableLeftCompat="@drawable/ic_baseline_thumb_up_24" />
+
+    <TextView
+        android:id="@+id/tvComments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvAuthor"
+        app:layout_constraintStart_toEndOf="@+id/tvLikes"
+        android:text="@string/_0"
+        android:layout_marginStart="@dimen/twenty_four_dp"
+        android:paddingStart="@dimen/five_dp"
+        android:paddingEnd="@dimen/five_dp"
+        android:drawablePadding="@dimen/five_dp"
+        android:layout_marginTop="@dimen/twenty_four_dp"
+        app:drawableLeftCompat="@drawable/ic_baseline_comment_24" />
+
+    <Button
+        android:id="@+id/btFullArticle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvLikes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/read_full_article"
+        android:layout_marginStart="@dimen/ten_dp"
+        android:layout_marginEnd="@dimen/ten_dp"
+        android:fontFamily="@font/futura_light_font"
+        android:textStyle="bold"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
